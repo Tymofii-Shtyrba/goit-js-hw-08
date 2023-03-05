@@ -19,7 +19,6 @@ const currentContent = {};
 
 const contentChanges = e => {
   e.target.name === 'email' ? currentContent.email = e.target.value : currentContent.message = e.target.value;
-  console.log(currentContent);
   localStorage.setItem("feedback-form-state", JSON.stringify(currentContent));
 }
 
@@ -31,5 +30,5 @@ feedback.addEventListener('submit', e => {
   emailField.value = '';
   messageField.value = '';
   localStorage.removeItem("feedback-form-state");
+  console.log('yes');
 }) 
-
